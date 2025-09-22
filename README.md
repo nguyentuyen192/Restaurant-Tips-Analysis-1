@@ -276,3 +276,72 @@ plt.title('Whole dataset tip values')
 plt.grid(True)
 plt.show()
 ```
+![Alt text](https://github.com/nguyentuyen192/Restaurant-Tips-Analysis-1/blob/main/image/Chart1.png)
+
+🚬 **Smokers tips histogram**
+Plot the histogram for smokers tips distribution.
+
+Use the following settings:
+
+Size: 15 x 5
+Color: #ff7675
+X-axis label: Tip value
+Y-axis label: Frequency
+Chart title: Smokers tip values
+Gridlines: show
+
+```
+# YOUR CODE
+plt.figure(figsize=(15, 5))
+plt.hist(smokers_df['tip'], bins = 20, color = '#ff7675')
+plt.xlabel('Tip value')
+plt.ylabel('Frequency')
+plt.title('Smokers tip values')
+plt.grid(True)
+plt.show()
+```
+
+![Alt text](https://github.com/nguyentuyen192/Restaurant-Tips-Analysis-1/blob/main/image/chart2.png)
+
+🚭 **Non-smokers tips histogram**
+Plot the histogram for non-smokers tips distribution.
+
+Use the following settings:
+
+Size: 15 x 5
+Color: #55efc4
+X-axis label: Tip value
+Y-axis label: Frequency
+Chart title: Non-smokers tip values
+Gridlines: show
+
+```
+# YOUR CODE
+plt.figure(figsize=(15, 5))
+plt.hist(non_smokers_df['tip'], bins = 20, color = '#55efc4')
+plt.xlabel('Tip value')
+plt.ylabel('Frequency')
+plt.title('Non-smokers tip values')
+plt.grid(True)
+plt.show()
+```
+
+![Alt text](https://github.com/nguyentuyen192/Restaurant-Tips-Analysis-1/blob/main/image/chart3.png)
+
+⭐ **Extra-task with a higher difficulty**
+Plot all 3 charts in a row in the same cell:
+
+```
+# YOUR CODE
+figure, axis = plt.subplots(1, 3, figsize=(15, 5))
+axis[0].hist(df['tip'], bins = 5, color = '#74b9ff')
+axis[0].set_title('Whole dataset tip values')
+
+axis[1].hist(smokers_df['tip'], bins = 5, color = '#74b9ff')
+axis[1].set_title('Smokers dataset tip values')
+
+axis[2].hist(non_smokers_df['tip'], bins = 5, color = '#74b9ff')
+axis[2].set_title('Non smokers dataset tip values')
+```
+
+![Alt text](https://github.com/nguyentuyen192/Restaurant-Tips-Analysis-1/blob/main/image/chart4.png)
